@@ -13,9 +13,14 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write
+  contents: write
+  attestations: write
+
 env:
-  REGISTRY: dbgso
-  IMAGE_NAME: markdown-to-pdf-with-figures
+  REGISTRY: docker.io
+  IMAGE_NAME: dbgso/markdown-to-pdf-with-figures
 
 jobs:
   push_to_registry:
@@ -40,7 +45,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          images: ${{ env.IMAGE_NAME}}
 
       - name: Build and push Docker image
         id: push
