@@ -1,0 +1,15 @@
+{
+  "name": "crossnote",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "run": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crossnote": "^0.9.9",
+    "puppeteer-core": "^23.1.1"
+  }
+}
