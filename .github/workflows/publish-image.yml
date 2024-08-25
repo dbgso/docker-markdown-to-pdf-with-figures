@@ -13,6 +13,11 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write
+  contents: write
+  attestations: write
+
 env:
   REGISTRY: dbgso
   IMAGE_NAME: markdown-to-pdf-with-figures
